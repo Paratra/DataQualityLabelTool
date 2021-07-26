@@ -159,7 +159,7 @@ class LabelFrame(wx.Frame):
 
     #----------------------------------------------------------------------
     def KeyDown_GOOD(self):
-        self.label_result.append(np.concatenate((self.data[self.ind,:], np.array([0]))))
+        self.label_result.append(np.concatenate((self.data[self.ind,:], np.array([1]))))
         # import pdb; pdb.set_trace()
         self.ind += 1
         # self.p.SetBackgroundColour('Green')
@@ -170,7 +170,7 @@ class LabelFrame(wx.Frame):
 
     #----------------------------------------------------------------------
     def KeyDown_BAD(self):
-        self.label_result.append(np.concatenate((self.data[self.ind,:], np.array([1]))))
+        self.label_result.append(np.concatenate((self.data[self.ind,:], np.array([0]))))
         self.ind += 1
         # self.p.SetBackgroundColour('Green')
         self.canvas.Draw(drawBarGraph(self.data[self.ind,:1000]/max(self.data[self.ind,:1000])), yAxis=(-3,4))
