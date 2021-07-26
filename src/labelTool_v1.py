@@ -239,14 +239,18 @@ class LabelFrame(wx.Frame):
         if (self.key_code == 49) or (self.key_code == 325): # key 1
             self.KeyDown_GOOD()
             print('Good data!')
+            print(np.asarray(self.label_result).shape[0])
         elif (self.key_code == 50) or (self.key_code == 326): # key 2
             self.KeyDown_BAD()
             print('Bad data!')
+            print(np.asarray(self.label_result).shape[0])
         elif (self.key_code == 51) or (self.key_code == 327): # key 3
             self.KeyDown_GO_BACK()
             print('Go Back!')
+            print(np.asarray(self.label_result).shape[0])
         elif (self.key_code == 52) or (self.key_code == 328): # key 4
             self.KeyDown_SAVE()
+            print(np.asarray(self.label_result).shape[0])
             # print('Save!')
 
     def __OpenSingleFile(self, event):
