@@ -263,13 +263,13 @@ class LabelFrame(wx.Frame):
         self.current_file_name = 'none.none'
         NPY_FILE = False
         while not NPY_FILE:
-            if self.current_file_name.split('.')[1] != 'npy':
+            if self.current_file_name.split('.')[-1] != 'npy':
                 print('Please load a npy file!')
                 self.path = fileDialog.GetPath()
                 self.data = np.load(self.path)
                 self.ind = 0
                 self.current_file_name = self.path.split('/')[-1]
-            elif self.current_file_name.split('.')[1] == 'npy':
+            elif self.current_file_name.split('.')[-1] == 'npy':
                 NPY_FILE = True
                 self.label_result = []
         print(f'{self.current_file_name} loaded!')
